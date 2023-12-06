@@ -13,4 +13,16 @@ function getEstoque(){
     return structuredClone(estoque)
 }
 
-export {getEstoque}
+function transacao(origem, destino, tipo, quantidade) {
+    if (destino === "pomar") {
+        const pessoa = estoque[origem]
+        for (let i = 0; i < pessoa.length; i++){
+            const monte = pessoa[i]
+            if (monte.tipo === tipo) {
+                monte.quantidade -= quantidade
+            }
+        }
+    }
+}
+
+export {getEstoque, transacao}
