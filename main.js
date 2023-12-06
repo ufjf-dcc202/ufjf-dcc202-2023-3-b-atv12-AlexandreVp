@@ -12,7 +12,7 @@ function leFormulario(event) {
     const origem = document.entrada.origem.value
     const destino = document.entrada.destino.value
 
-    console.log()
+    console.log(`${origem} doa ${quantidade} ${fruta} para ${destino}`)
 }
 
 function preencheLista(lista, estoqueDaPessoa) {
