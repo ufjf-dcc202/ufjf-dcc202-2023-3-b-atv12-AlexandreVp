@@ -5,6 +5,8 @@ const olMaria = document.querySelector('#maria')
 
 document.entrada.addEventListener('submit', leFormulario)
 
+atualizaTela()
+
 function leFormulario(event) {
     event.preventDefault()
     const quantidade = document.entrada.quantidade.valueAsNumber
