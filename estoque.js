@@ -19,7 +19,7 @@ function transacao(origem, destino, tipo, quantidade) {
         for (let i = 0; i < pessoa.length; i++){
             const monte = pessoa[i]
             if (monte.tipo === tipo) {
-                monte.quantidade -= quantidade
+                monte.qtd -= quantidade
             }
         }
     }
