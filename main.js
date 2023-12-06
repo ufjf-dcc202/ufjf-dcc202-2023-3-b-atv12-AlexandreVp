@@ -24,4 +24,12 @@ function atualizaTela() {
         li.textContent = `${monte.tipo}: ${monte.qtd}`
         olJoao.appendChild(li)
     }
+
+    olMaria.innerHTML = ""
+    for(let i=0; i < estoque.maria.length; i++) {
+        const monte = estoque.maria[i]
+        const li = document.createElement('li')
+        li.textContent = `${monte.tipo}: ${monte.qtd}`
+        olMaria.appendChild(li)
+    }
 }
