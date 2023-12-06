@@ -17,6 +17,7 @@ function leFormulario(event) {
     console.log(`${origem} doa ${quantidade} ${fruta} para ${destino}`)
 
     transacao(origem, destino, fruta, quantidade)
+    atualizaTela()
 }
 
 function preencheLista(lista, estoqueDaPessoa) {
