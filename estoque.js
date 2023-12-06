@@ -14,12 +14,18 @@ function getEstoque(){
 }
 
 function transacao(origem, destino, tipo, quantidade) {
+    if (origem === destino) {
+        return
+    }
+
     if (destino === "pomar") {
         dePessoaParaPomar(origem, tipo, quantidade)
+        return
     }
 
     if (origem === "pomar") {
         dePomarParaPessoa(destino, tipo, quantidade)
+        return
     }
 }
 
