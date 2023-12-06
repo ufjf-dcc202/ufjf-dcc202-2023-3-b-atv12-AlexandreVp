@@ -20,8 +20,23 @@ function transacao(origem, destino, tipo, quantidade) {
             const monte = pessoa[i]
             if (monte.tipo === tipo) {
                 monte.qtd -= Math.min(quantidade, monte.qtd)
+                return
             }
         }
+    }
+
+    if (origem === "pomar") {
+        const pessoa = estoque[destino]
+        for (let i = 0; i < pessoa.length; i++){
+            const monte = pessoa[i]
+            if (monte.tipo === tipo) {
+                monte.qtd += Math.max(quantidade, 0)
+                return
+            }
+        }
+
+        const novoMonte = {'tipo': tipo, 'qtd': Math.max(quantidade, 0)}
+        pessoa.push(novoMonte)
     }
 }
 
