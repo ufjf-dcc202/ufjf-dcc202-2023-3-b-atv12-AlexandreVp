@@ -1,9 +1,11 @@
-import { getEstoque, transacao } from "./estoque.js"
+import { getEstoque, transacao, limpaLista } from "./estoque.js"
 
 const olJoao = document.querySelector('#joao')
 const olMaria = document.querySelector('#maria')
+const btnLimpar = document.querySelector("#limpar")
 
 document.entrada.addEventListener('submit', leFormulario)
+btnLimpar.addEventListener('click', limparItensDeLista)
 
 atualizaTela()
 
@@ -28,6 +30,11 @@ function preencheLista(lista, estoqueDaPessoa) {
         li.textContent = `${monte.tipo}: ${monte.qtd}`
         lista.appendChild(li)
     }
+}
+
+function limparItensDeLista() {
+    limpaLista()
+    atualizaTela()
 }
 
 function atualizaTela() {
