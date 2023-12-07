@@ -83,4 +83,11 @@ function dePomarParaPessoa(destino, tipo, quantidade){
     pessoa.push(novoMonte)
 }
 
-export {getEstoque, transacao}
+function limpaLista(){
+    estoque = {
+        'joao': [],
+        'maria': []
+    }
+}
+
+export {getEstoque, transacao, limpaLista}
