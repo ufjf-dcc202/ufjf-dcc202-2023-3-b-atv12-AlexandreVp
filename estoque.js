@@ -55,7 +55,7 @@ function transacao(origem, destino, tipo, quantidade) {
     }
     const qtdReal = Math.min(quantidade, monteOrigem.qtd)
     monteDestino.qtd += qtdReal
-    monteOrigem.qtd -+ qtdReal
+    monteOrigem.qtd -= qtdReal
 }
 
 function dePessoaParaPomar(origem, tipo, quantidade){
