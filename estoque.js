@@ -14,6 +14,14 @@ function getEstoque(){
 }
 
 function transacaoNoEstoque(origem, destino, tipo, quantidade) {
+    if (!estoque[origem] && origem != "pomar") {
+        estoque[origem] = []
+    }
+
+    if (!estoque[destino] && destino != "pomar") {
+        estoque[destino] = []
+    }
+
     if (origem === destino) {
         return
     }
