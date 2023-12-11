@@ -13,7 +13,7 @@ function getEstoque(){
     return structuredClone(estoque)
 }
 
-function transacao(origem, destino, tipo, quantidade) {
+function transacaoNoEstoque(origem, destino, tipo, quantidade) {
     if (origem === destino) {
         return
     }
@@ -83,11 +83,11 @@ function dePomarParaPessoa(destino, tipo, quantidade){
     pessoa.push(novoMonte)
 }
 
-function limpaLista(){
+function limpaEstoque(){
     estoque = {
         'joao': [],
         'maria': []
     }
 }
 
-export {getEstoque, transacao, limpaLista}
+export {getEstoque, transacaoNoEstoque, limpaEstoque}

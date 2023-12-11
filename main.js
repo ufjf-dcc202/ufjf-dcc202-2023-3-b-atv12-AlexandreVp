@@ -1,4 +1,4 @@
-import { getEstoque, transacao, limpaLista } from "./estoque.js"
+import { getEstoque, transacaoNoEstoque, limpaEstoque } from "./estoque.js"
 
 const olJoao = document.querySelector('#joao')
 const olMaria = document.querySelector('#maria')
@@ -18,7 +18,7 @@ function leFormulario(event) {
 
     console.log(`${origem} doa ${quantidade} ${fruta} para ${destino}`)
 
-    transacao(origem, destino, fruta, quantidade)
+    transacaoNoEstoque(origem, destino, fruta, quantidade)
     atualizaTela()
 }
 
@@ -33,7 +33,7 @@ function preencheLista(lista, estoqueDaPessoa) {
 }
 
 function limparItensDeLista() {
-    limpaLista()
+    limpaEstoque()
     atualizaTela()
 }
 
