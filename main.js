@@ -39,6 +39,14 @@ function limparItensDeLista() {
 
 function atualizaTela() {
     const estoque = getEstoque()
-    preencheLista(olJoao, estoque.joao)
-    preencheLista(olMaria, estoque.maria)
+    olJoao.innerHTML = "";
+    olMaria.innerHTML = "";
+    document.entrada.quantidade.value = 1;
+    document.entrada.fruta.value = "maca";
+    if(estoque.joao && estoque.joao.length > 0){
+        preencheLista(olJoao, estoque.joao);
+    }
+    if(estoque.maria && estoque.maria.length > 0){
+        preencheLista(olMaria, estoque.maria);
+    }
 }
