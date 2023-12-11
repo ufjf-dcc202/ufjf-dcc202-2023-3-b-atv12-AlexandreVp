@@ -84,10 +84,7 @@ function dePomarParaPessoa(destino, tipo, quantidade){
 }
 
 function limpaEstoque(){
-    estoque = {
-        'joao': [],
-        'maria': []
-    }
+    estoque = {}
 }
 
 export {getEstoque, transacaoNoEstoque, limpaEstoque}
